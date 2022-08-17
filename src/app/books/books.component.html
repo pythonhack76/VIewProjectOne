@@ -1,11 +1,23 @@
 <p id="titolo">Lista dei Libri disponibili</p>
-<button (click)="handleClick()" [disabled]=" isDisabled ">Mostra Libri</button>
-<ul>
+<button type="button" (click)="isShowing = !isShowing">
+
+  <ng-container *ngIf="!isShowing">Mostra</ng-container>
+  <ng-container *ngIf="isShowing">Nascondi</ng-container>
+</button>
+
+<!--<input type="text" (input)="handleInput($event)" />
+<input type="text" [(ngModel)]="mioNome" />
+<input type="text" [(ngModel)]="mioCognome" />-->
+<div>
+
+
+</div>
+<ul *ngIf="isShowing">
   <li>
-   <img [src]=" src" [alt]=" titolo " width="100" /><b>{{titolo}}</b> scritto da {{ autore }}
+   <img [src]=" src" [alt]="titolo" width="100" /><b>{{titolo}}</b> scritto da {{ autore }}
   </li>
   <li>
-    <img [src]=" src2 " [alt]=" titolo2 " width="100" /><b>{{titolo2}}</b> scritto da {{ autore2 }}
+    <img [src]=" src2 " [alt]="titolo2" width="100" /><b>{{titolo2}}</b> scritto da {{ autore2 }}
   </li>
 </ul>
 

@@ -16,17 +16,23 @@ export class BooksComponent implements OnInit {
 
   isDisabled: boolean = false;
 
+  isShowing: boolean = true;
 
-  ;
 
   constructor() { }
 
   ngOnInit(): void {}
 
-  handleClick(){
-    this.isDisabled = true;
+  // handleClick(){
+    // this.isDisabled = true;
 
+  // }
+
+  toggleBooks() {
+    this.isShowing = !this.isShowing;
   }
 
 
-}
+
+
+    }
