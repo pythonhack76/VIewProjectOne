@@ -1,10 +1,11 @@
 <p id="titolo">Lista dei Libri disponibili</p>
+<button (click)="handleClick()" [disabled]=" isDisabled ">Mostra Libri</button>
 <ul>
   <li>
-   <img src="{{ src }}" alt="{{ titolo }}" width="100" /><b>{{titolo}}</b> scritto da {{ autore }}
+   <img [src]=" src" [alt]=" titolo " width="100" /><b>{{titolo}}</b> scritto da {{ autore }}
   </li>
   <li>
-    <img src="{{ src2 }}" alt="{{ titolo2 }}" width="100" /><b>{{titolo2}}</b> scritto da {{ autore2 }}
+    <img [src]=" src2 " [alt]=" titolo2 " width="100" /><b>{{titolo2}}</b> scritto da {{ autore2 }}
   </li>
 </ul>
 

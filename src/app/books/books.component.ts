@@ -12,11 +12,21 @@ export class BooksComponent implements OnInit {
 
   titolo2: string = 'Programming';
   autore2: string = 'Coom';
-  src2: string = '../../assets/imgs/book.jpg';
+  src2: string = '../../assets/imgs/student.jpg';
+
+  isDisabled: boolean = false;
+
+
+  ;
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  handleClick(){
+    this.isDisabled = true;
+
   }
+
 
 }
