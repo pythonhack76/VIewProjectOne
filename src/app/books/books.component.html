@@ -12,12 +12,13 @@
 
 
 </div>
+
 <ul *ngIf="isShowing">
+  <ng-container *ngFor="let book of books; let i=index">
   <li>
-   <img [src]=" src" [alt]="titolo" width="100" /><b>{{titolo}}</b> scritto da {{ autore }}
+    {{ i + 1 }}
+   <img [src]="book.src" [alt]="book.titolo" width="100" /><b>{{book.titolo}}</b> scritto da {{ book.autore }}
   </li>
-  <li>
-    <img [src]=" src2 " [alt]="titolo2" width="100" /><b>{{titolo2}}</b> scritto da {{ autore2 }}
-  </li>
-</ul>
+</ng-container>
+      </ul>
 

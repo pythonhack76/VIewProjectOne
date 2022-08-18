@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+interface Book {
+  titolo: string;
+  autore: string;
+  src: string;
+
+}
 
 @Component({
   selector: 'app-books',
@@ -6,13 +12,34 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./books.component.css']
 })
 export class BooksComponent implements OnInit {
-  titolo:string = 'Shining';
-  autore: string = 'SK';
-  src: string = '../../assets/imgs/book.jpg';
 
-  titolo2: string = 'Programming';
-  autore2: string = 'Coom';
-  src2: string = '../../assets/imgs/student.jpg';
+  books: Book[] = [
+
+    {
+
+      titolo: 'Shining',
+      autore:  'SK',
+      src:  '../../assets/imgs/book.jpg',
+
+    },
+
+    {
+
+      titolo:  'Programming',
+      autore:  'Coom',
+      src:  '../../assets/imgs/student.jpg',
+
+
+    },
+
+  ];
+
+
+
+
+
+
+
 
   isDisabled: boolean = false;
 
